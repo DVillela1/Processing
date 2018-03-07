@@ -6,18 +6,31 @@ void setup() {
      doh = minim.loadSample("/Users/League/Google Drive/league-sounds/homer-doh.wav");
      woohoo = minim.loadSample("/Users/League/Google Drive/league-sounds/homer-woohoo.wav");
 }
-
 void draw() {
-  if(mousePressed) {
-    println(mouseX+" "+mouseY);
-  }
+  if (mousePressed) {
+    
 
-      if(mouseX<415) {
+  if(mouseX > 286 && mouseX < 306 && mouseY > 96 && mouseY < 120) {
+    playWoohoo();
+  }
+  else{
+   playDoh(); 
+  }
+  }
+ /*     if(mouseX<415) {
         mouseX=415;
       }
-  
-  
-  
+      if(mouseY<327) {
+        mouseY=327; 
+      }
+      if(mouseX>415) {
+        mouseX=415;
+      }
+      if(mouseY>360) {
+        mouseY=360;
+      } */
+  noFill();
+// rect(346, 303, 376-346, 353-303);  
   
   
 }
